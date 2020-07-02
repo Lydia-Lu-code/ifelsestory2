@@ -1,0 +1,88 @@
+storyArr1=["A","B","C","D","E","F"]
+storyArr2=[]
+storyArr3=[]
+storyArr4=[]
+
+var count = 0
+
+
+===================
+Action Button{
+
+storyLabel.text = storyArr1[count]
+//cunut += 1
+
+}
+
+===================
+
+
+===================
+
+var answer = ""
+
+if answer == answer1 ||answer == answer2 ||answer == answer3 ||answer == answer4 ||
+    bedEnd()
+    if answer == answer5{
+        goodEnd()
+        }
+    }
+
+====================
+class Data {
+    var question = ""
+    var answer1 = ""
+    var answer2 = ""
+    var answer3 = ""
+    var answer4 = ""
+    var answer5 = ""
+
+    init(sendQuestion: String,sendAnswer1: String, sendAnswer2: String, sendAnswer3: String, sendAnswer4: String, sendAnswer5: String)    
+  //  init(sendQuestion: "question",sendAnswer1: "answer1", sendAnswer2: "answer2", sendAnswer3: "answer3", sendAnswer4: "answer4", sendAnswer5: "answer5")
+        self.question = question
+        self.answer1 = answer1
+		self.answer2 = answer2
+		self.answer3 = answer3
+		self.answer4 = answer4
+		self.answer5 = answer5
+
+}
+
+
+var dataArray = [Data(sendQuestion: "不知道過了多少時間，你醒了，第一眼看到的東西是．．．",sendAnswer1: "Ａ．雪白的床單和輸液瓶", sendAnswer2: "Ｂ．床頭櫃旁的精緻卡片", sendAnswer3: "Ｃ．輕鋼架天花板", sendAnswer4: "", sendAnswer5: ""),
+Data(sendQuestion: "『醒了？！』/n說話的人是．．．．",sendAnswer1: "Ａ．平常追捕你的警察", sendAnswer2: "Ｂ．走散的友人", sendAnswer2: "Ｃ．與前任長的很像的陌生人", sendAnswer4: "", sendAnswer5: ""),
+Data(sendQuestion: "隨後也只是淡淡的囑咐了一句．．．",sendAnswer1: "Ａ．中暑了，請回去要補充電解水", sendAnswer2: "Ｂ．要多多運動，不然很容易體力不支", sendAnswer3: "Ｃ．好好維持正常飲食，會昏倒是你營養不良", sendAnswer4: "", sendAnswer5: ""),
+Data(sendQuestion: "我覺得襲擊我的人是：",sendAnswer1: "Ａ．警察", sendAnswer2: "Ｂ．友人", sendAnswer3: "Ｃ．陌生人", sendAnswer4: "Ｄ．護士", sendAnswer5: "Ｅ．醫生"),
+
+
+var answer = ""
+
+if answer == answer1 || answer == answer2 || answer == answer3 || answer == answer4 ||{
+    bedEnd()
+
+    if answer == answer5{
+        goodEnd()
+        }
+    }
+print(storyWordEnd)
+
+func badEnd(){
+let storyWordEnd = [("...."),
+("吃過藥躺在床上，昏迷之中依約聽到有人說話的聲音"),
+("聽不清楚再說什麼．．．．"),
+("伴隨著手臂上一個小小的刺痛，身體越來越使不上力、頭也越來越昏沉"),
+("脖子．．．暖暖的，在慢慢變冷的空氣中，脖子附近的暖意逐漸擴散，阿好舒服好像可以好好地睡一覺了．．．"),
+("你便再也沒有醒來"),
+("Bad End 無解之謎")]
+}
+
+func goodEnd(){
+let storyWordEnd =[("...."),
+("吃過藥躺在床上，昏迷之中依約聽到有人說話的聲音"),
+("不妙，心中早有準備的我，一個反轉起身，抓住那人的手，用全身的力量給他一個過肩摔。"),
+("綁好被摔暈的醫生後，趕緊報警。那個熟面孔的警察很快就趕來，帶走兇手醫生。"),
+("GoodEnd惡有惡報")] 
+}
+
+
+

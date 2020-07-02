@@ -1,8 +1,8 @@
 //
 //  SceneDelegate.swift
-//  if else story
+//  ifelse2
 //
-//  Created by 維衣 on 2020/6/10.
+//  Created by 維衣 on 2020/6/21.
 //  Copyright © 2020 Lydia-L. All rights reserved.
 //
 
