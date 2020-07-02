@@ -26,6 +26,7 @@ class ViewController: UIViewController {
 //    var index = 0
     var selectName = ""
     var end = ""
+    var endText = ""
 
     
     override func viewDidLoad() {
@@ -79,107 +80,46 @@ class ViewController: UIViewController {
                     break
                    }
         
-        
-//        switch end {
-//            case "bedEnd":
-//                switch count3 {
-//                case 0,1,2,3,4,5,6:
-//                    count3 += 1
-//                    textLabel.text = "\(bedEnd[count3 - 1])"
-//                    return
-//                default:
-//                    break
-//                }
-//
-//            case "goodEnd":
-//                switch count3 {
-//                case 0,1,2,3,4:
-//                    count3 += 1
-//                    textLabel.text = "\(goodEnd[count3 - 1])"
-//                    return
-//                default:
-//                    break
-//                    }
-//            default:
-//                break
-//                }
-        
-        
-        
-            //第二個動作
-            //count += 1放在這裡，執行完上面才會執行這一行
-//        if count == 35 {
-//            selectBtns[0].isHidden = true
-//            selectBtns[1].isHidden = true
-//            selectBtns[2].isHidden = true
-//            selectBtns[3].isHidden = true
-//            selectBtns[4].isHidden = true
-//            nextButton.isHidden = false
-//
-//
-//            switch end {
-//                case "bedEnd":
-//                    switch count3 {
-//                        case 0,1,2,3,4,5,6:
+
+        if count == 34 {
+            
+            count3 += 1
+//            textLabel.text = endText
+            
+                selectBtns[0].isHidden = false
+                selectBtns[1].isHidden = false
+                selectBtns[2].isHidden = false
+                selectBtns[3].isHidden = false
+                selectBtns[4].isHidden = false
+                nextButton.isHidden = true
+
+                selectBtns[0].setTitle(dataArray[i].option[0], for: UIControl.State.normal)
+                selectBtns[1].setTitle(dataArray[i].option[1], for: UIControl.State.normal)
+                selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
+                selectBtns[3].setTitle(dataArray[i].option[3], for: UIControl.State.normal)
+                selectBtns[4].setTitle(dataArray[i].option[4], for: UIControl.State.normal)
+            
+            if end == "bedEnd" {
+                if count3 <= 6 {
+                    
+                    textLabel.text = "\(bedEnd[count3 - 1])"
+                    }
+                }else if end == "goodEnd" {
+                    if count3 <= 4 {
 //                        count3 += 1
-//                        textLabel.text = "\(bedEnd[count3 - 1])"
-//                            return
-//                        default:
-//                            break
-//                        }
-//
-//                case "goodEnd":
-//                        switch count3 {
-//                        case 0,1,2,3,4:
-//                        count3 += 1
-//                        textLabel.text = "\(goodEnd[count3 - 1])"
-//                            return
-//                        default:
-//                            break
-//                            }
-//                default:
-//                    break
-//                    }
-//            textLabel.text = "\(bedEnd[count3])"
-            
-//        }else {
+                        textLabel.text = "\(goodEnd[count3 - 1])"
+                    }
+                }
+        }else{
         
-        count += 1
-        textLabel.text = "\(storyArray[count])"
-        
-//        if count >= 0 && count <= 34 {
-//            count += 1
-//            textLabel.text = "\(storyArray[count])"
-//        }else {
-//            selectBtns[0].isHidden = true
-//            selectBtns[1].isHidden = true
-//            selectBtns[2].isHidden = true
-//            selectBtns[3].isHidden = true
-//            selectBtns[4].isHidden = true
-//            nextButton.isHidden = false
-//
-//            if end == "bedEnd" {
-//                if count3 <= 6 {
-//                   count3 += 1
-//                   textLabel.text = bedEnd[count3 - 1]
-//
-//                }
-//            }else if end == "goodEnd" {
-//                if count3 <= 4 {
-//                   count3 += 1
-//                   textLabel.text = bedEnd[count3 - 1]
-//                }
-//            }
-//        }
+            count += 1
+            textLabel.text = "\(storyArray[count])"
             
-//        }
-        
-        //第三個動作
-        if count == 0 {
-            imageView.image = UIImage(named: "foxMask.png")
+            if count == 0 {
+                imageView.image = UIImage(named: "foxMask.png")
             
             
-        }else if count == 13 || count == 19 || count == 29 {
+            }else if count == 13 || count == 19 || count == 29 {
                 
                 selectBtns[0].isHidden = false
                 selectBtns[1].isHidden = false
@@ -195,35 +135,21 @@ class ViewController: UIViewController {
                 i = i + 1
 
 
-        }else if count == 34 {
-                selectBtns[0].isHidden = false
-                selectBtns[1].isHidden = false
-                selectBtns[2].isHidden = false
-                selectBtns[3].isHidden = false
-                selectBtns[4].isHidden = false
-                nextButton.isHidden = true
-
-                selectBtns[0].setTitle(dataArray[i].option[0], for: UIControl.State.normal)
-                selectBtns[1].setTitle(dataArray[i].option[1], for: UIControl.State.normal)
-                selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
-                selectBtns[3].setTitle(dataArray[i].option[3], for: UIControl.State.normal)
-                selectBtns[4].setTitle(dataArray[i].option[4], for: UIControl.State.normal)
+//            }else if count == 34 {
+//                selectBtns[0].isHidden = false
+//                selectBtns[1].isHidden = false
+//                selectBtns[2].isHidden = false
+//                selectBtns[3].isHidden = false
+//                selectBtns[4].isHidden = false
+//                nextButton.isHidden = true
+//
+//                selectBtns[0].setTitle(dataArray[i].option[0], for: UIControl.State.normal)
+//                selectBtns[1].setTitle(dataArray[i].option[1], for: UIControl.State.normal)
+//                selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
+//                selectBtns[3].setTitle(dataArray[i].option[3], for: UIControl.State.normal)
+//                selectBtns[4].setTitle(dataArray[i].option[4], for: UIControl.State.normal)
             
-            
-        }else if count == 35 {
-                count = 35
-            if end == "bedEnd" {
-                if count3 <= 6 {
-                    count3 += 1
-                    textLabel.text = bedEnd[count3 - 1]
-                    }
-                }else if end == "goodEnd" {
-                    if count3 <= 4 {
-                        count3 += 1
-                        textLabel.text = bedEnd[count3 - 1]
-                    }
-                }
-
+            }
         }
     }
 
