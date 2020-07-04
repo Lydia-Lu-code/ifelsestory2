@@ -80,38 +80,11 @@ class ViewController: UIViewController {
                     break
                    }
         
-
-        if count == 34 {
-            
-            count3 += 1
-//            textLabel.text = endText
-            
-                selectBtns[0].isHidden = false
-                selectBtns[1].isHidden = false
-                selectBtns[2].isHidden = false
-                selectBtns[3].isHidden = false
-                selectBtns[4].isHidden = false
-                nextButton.isHidden = true
-
-                selectBtns[0].setTitle(dataArray[i].option[0], for: UIControl.State.normal)
-                selectBtns[1].setTitle(dataArray[i].option[1], for: UIControl.State.normal)
-                selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
-                selectBtns[3].setTitle(dataArray[i].option[3], for: UIControl.State.normal)
-                selectBtns[4].setTitle(dataArray[i].option[4], for: UIControl.State.normal)
-            
-            if end == "bedEnd" {
-                if count3 <= 6 {
-                    
-                    textLabel.text = "\(bedEnd[count3 - 1])"
-                    }
-                }else if end == "goodEnd" {
-                    if count3 <= 4 {
-//                        count3 += 1
-                        textLabel.text = "\(goodEnd[count3 - 1])"
-                    }
-                }
-        }else{
         
+
+        
+        if count >= 0 , count <= 34 {
+                        
             count += 1
             textLabel.text = "\(storyArray[count])"
             
@@ -129,31 +102,64 @@ class ViewController: UIViewController {
                 textLabel.text = "\(dataArray[i].question)"
 
                 selectBtns[0].setTitle(dataArray[i].option[0], for: UIControl.State.normal)
+                    selectBtns[1].setTitle(dataArray[i].option[1], for: UIControl.State.normal)
+                    selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
+                
+                        i = i + 1
+
+
+            }else if count == 34 {
+                selectBtns[0].isHidden = false
+                selectBtns[1].isHidden = false
+                selectBtns[2].isHidden = false
+                selectBtns[3].isHidden = false
+                selectBtns[4].isHidden = false
+                nextButton.isHidden = true
+
+                selectBtns[0].setTitle(dataArray[i].option[0], for: UIControl.State.normal)
                 selectBtns[1].setTitle(dataArray[i].option[1], for: UIControl.State.normal)
                 selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
-            
-                i = i + 1
-
-
-//            }else if count == 34 {
-//                selectBtns[0].isHidden = false
-//                selectBtns[1].isHidden = false
-//                selectBtns[2].isHidden = false
-//                selectBtns[3].isHidden = false
-//                selectBtns[4].isHidden = false
-//                nextButton.isHidden = true
-//
-//                selectBtns[0].setTitle(dataArray[i].option[0], for: UIControl.State.normal)
-//                selectBtns[1].setTitle(dataArray[i].option[1], for: UIControl.State.normal)
-//                selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
-//                selectBtns[3].setTitle(dataArray[i].option[3], for: UIControl.State.normal)
-//                selectBtns[4].setTitle(dataArray[i].option[4], for: UIControl.State.normal)
-            
+                selectBtns[3].setTitle(dataArray[i].option[3], for: UIControl.State.normal)
+                selectBtns[4].setTitle(dataArray[i].option[4], for: UIControl.State.normal)
             }
+                
+                
+        }else if count >= 35 , count <= 42 {
+                
+                count3 += 1
+                
+                if end == "bedEnd" {
+                    if count3 <= 6 {
+                    textLabel.text = bedEnd[count3 - 1]
+                    }else {
+                    // print("123")
+                    imageView.image = UIImage(named: ".png")
+                    }
+                                            
+                }else if end == "goodEnd" {
+                    if count3 <= 4 {
+//                       count3 += 1
+                    textLabel.text = goodEnd[count3 - 1]
+                    
+                
+            
+                
+                }
+            }
+            
+            
+            ////////////////////////
         }
     }
+    
+    
+    
+    
+    
+    
+    
+    
 
-    //那最後一個選項 button[4]顯示不出來
     @IBAction func selButtons(_ sender: UIButton) {
 
         if sender == selectBtns[0] || sender == selectBtns[1] || sender == selectBtns[2] || sender == selectBtns[3] || sender == selectBtns[4] {
