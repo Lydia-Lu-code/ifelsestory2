@@ -38,6 +38,7 @@ class ViewController: UIViewController {
             selectBtns[3].isHidden = true
             selectBtns[4].isHidden = true
             textLabel.text = "\(storyArray[0])"
+            imageView.image = UIImage(named: "0.png")
         // Do any additional setup after loading the view.
     }
     
@@ -81,18 +82,24 @@ class ViewController: UIViewController {
                    }
         
         
-
+            count += 1
         
         if count >= 0 , count <= 34 {
                         
-            count += 1
+
             textLabel.text = "\(storyArray[count])"
             
-            if count == 0 {
-                imageView.image = UIImage(named: "foxMask.png")
-            
-            
-            }else if count == 13 || count == 19 || count == 29 {
+            if count == 4 {
+                imageView.image = UIImage(named: "4.png")
+                
+            }else if count == 6 {
+                imageView.image = UIImage(named: "6.png")
+                
+            }else if count == 12 {
+            imageView.image = UIImage(named: "灰.png")
+                
+            }else if count == 13 {
+                imageView.image = UIImage(named: "13.png")
                 
                 selectBtns[0].isHidden = false
                 selectBtns[1].isHidden = false
@@ -106,7 +113,35 @@ class ViewController: UIViewController {
                     selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
                 
                         i = i + 1
+                
+            }else if count == 15 {
+                imageView.image = UIImage(named: "15.png")
+                
+            }else if count == 19 || count == 29 {
+                selectBtns[0].isHidden = false
+                selectBtns[1].isHidden = false
+                selectBtns[2].isHidden = false
+                nextButton.isHidden = true
 
+                textLabel.text = "\(dataArray[i].question)"
+
+                selectBtns[0].setTitle(dataArray[i].option[0], for: UIControl.State.normal)
+                selectBtns[1].setTitle(dataArray[i].option[1], for: UIControl.State.normal)
+                selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
+            
+                    i = i + 1
+
+            }else if count == 15 {
+                imageView.image = UIImage(named: "15.png")
+                
+            }else if count == 26 {
+                imageView.image = UIImage(named: "26.png")
+                
+            }else if count == 31 {
+                imageView.image = UIImage(named: "31.png")
+                
+            }else if count == 33 {
+                imageView.image = UIImage(named: "33.png")
 
             }else if count == 34 {
                 selectBtns[0].isHidden = false
@@ -121,36 +156,41 @@ class ViewController: UIViewController {
                 selectBtns[2].setTitle(dataArray[i].option[2], for: UIControl.State.normal)
                 selectBtns[3].setTitle(dataArray[i].option[3], for: UIControl.State.normal)
                 selectBtns[4].setTitle(dataArray[i].option[4], for: UIControl.State.normal)
+                }
             }
                 
                 
-        }else if count >= 35 , count <= 42 {
+        if count >= 35 {
                 
                 count3 += 1
-                
+                imageView.image = UIImage(named: "黑.png")
+                    
                 if end == "bedEnd" {
-                    if count3 <= 6 {
+                    if count3 <= 7 {
                     textLabel.text = bedEnd[count3 - 1]
+                        if count3 >= 4 && count3 <= 7 {
+                        imageView.image = UIImage(named: "紅.png")
+                        }
                     }else {
-                    // print("123")
-                    imageView.image = UIImage(named: ".png")
+                    imageView.image = UIImage(named: "未解之謎.png")
                     }
                                             
                 }else if end == "goodEnd" {
-                    if count3 <= 4 {
+                    if count3 <= 5 {
 //                       count3 += 1
                     textLabel.text = goodEnd[count3 - 1]
+                    }else {
+                    imageView.image = UIImage(named: "惡有惡報.png")
+                
                     
-                
-            
-                
+                    }
                 }
             }
             
             
-            ////////////////////////
+
         }
-    }
+    
     
     
     
@@ -172,6 +212,7 @@ class ViewController: UIViewController {
                 }else if sender == selectBtns[2] {
                     selectName = "stranger"
                     }
+            }
                 
             if count == 34 {
                 if sender == selectBtns[0] || sender == selectBtns[1] || sender == selectBtns[2] || sender == selectBtns[3] {
@@ -180,7 +221,7 @@ class ViewController: UIViewController {
                     end = "goodEnd"
                     }
                 }
-            }
+            
             selectBtns[0].isHidden = true
             selectBtns[1].isHidden = true
             selectBtns[2].isHidden = true
