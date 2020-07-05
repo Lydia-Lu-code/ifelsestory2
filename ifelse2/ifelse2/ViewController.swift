@@ -89,10 +89,7 @@ class ViewController: UIViewController {
 
             textLabel.text = "\(storyArray[count])"
             
-            if count == 4 {
-                imageView.image = UIImage(named: "4.png")
-                
-            }else if count == 6 {
+            if count == 6 {
                 imageView.image = UIImage(named: "6.png")
                 
             }else if count == 12 {
